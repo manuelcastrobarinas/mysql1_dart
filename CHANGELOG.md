@@ -1,6 +1,17 @@
 Changelog
 =========
 
+v0.24.1
+--
+
+19 Nov 2026
+
+Document the web bridge variable by variable. `MYSQL_HOST` and `MYSQL_PORT`
+are the database the bridge dials. `MYSQL_BRIDGE_BIND` and
+`MYSQL_BRIDGE_PORT` are the WebSocket the page opens. The README walks
+through MySQL on `127.0.0.1:3307` with the bridge on `127.0.0.1:8080`, and
+`example/example_web.dart` connects to that layout. Diagrams are in `doc/`.
+
 v0.24.0
 --
 

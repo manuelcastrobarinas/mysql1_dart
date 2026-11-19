@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="460" viewBox="0 0 960 460" role="img" aria-labelledby="title desc">
+  <title id="title">mysql2 bridge handshake</title>
+  <desc id="desc">The page sends the token as text. The bridge opens MySQL only after the token matches, replies ok, and then forwards binary frames unchanged.</desc>
+  <rect width="960" height="460" fill="#f7f5f1"/>
+  <text x="32" y="36" fill="#1c1915" font-family="Segoe UI, sans-serif" font-size="18" font-weight="650">What one connection does</text>
+
+  <text x="150" y="72" fill="#1d4e89" font-family="Segoe UI, sans-serif" font-size="14" font-weight="700" text-anchor="middle">Flutter web</text>
+  <text x="480" y="72" fill="#1e6b3a" font-family="Segoe UI, sans-serif" font-size="14" font-weight="700" text-anchor="middle">Bridge :8080</text>
+  <text x="800" y="72" fill="#8a5a12" font-family="Segoe UI, sans-serif" font-size="14" font-weight="700" text-anchor="middle">MySQL :3307</text>
+
+  <line x1="150" y1="84" x2="150" y2="430" stroke="#cfc8bc" stroke-width="2"/>
+  <line x1="480" y1="84" x2="480" y2="430" stroke="#cfc8bc" stroke-width="2"/>
+  <line x1="800" y1="84" x2="800" y2="430" stroke="#cfc8bc" stroke-width="2"/>
+
+  <line x1="150" y1="120" x2="472" y2="120" stroke="#243044" stroke-width="2"/>
+  <polygon points="480,120 470,115 470,125" fill="#243044"/>
+  <text x="168" y="112" fill="#1c1915" font-family="Segoe UI, sans-serif" font-size="13">1. Open ws://127.0.0.1:8080/mysql</text>
+
+  <line x1="150" y1="168" x2="472" y2="168" stroke="#243044" stroke-width="2"/>
+  <polygon points="480,168 470,163 470,173" fill="#243044"/>
+  <text x="168" y="160" fill="#1c1915" font-family="Segoe UI, sans-serif" font-size="13">2. Text frame: mysql2-bridge-auth &lt;token&gt;</text>
+
+  <rect x="496" y="188" width="250" height="36" rx="6" fill="#ffffff" stroke="#1e6b3a"/>
+  <text x="508" y="211" fill="#1e6b3a" font-family="Segoe UI, sans-serif" font-size="12">3. Token must match. Else close.</text>
+
+  <line x1="480" y1="250" x2="792" y2="250" stroke="#243044" stroke-width="2"/>
+  <polygon points="800,250 790,245 790,255" fill="#243044"/>
+  <text x="496" y="242" fill="#1c1915" font-family="Segoe UI, sans-serif" font-size="13">4. TCP connect 127.0.0.1:3307</text>
+
+  <line x1="472" y1="298" x2="158" y2="298" stroke="#243044" stroke-width="2"/>
+  <polygon points="150,298 160,293 160,303" fill="#243044"/>
+  <text x="176" y="290" fill="#1c1915" font-family="Segoe UI, sans-serif" font-size="13">5. Text frame: ok</text>
+
+  <line x1="800" y1="346" x2="488" y2="346" stroke="#243044" stroke-width="2"/>
+  <polygon points="480,346 490,341 490,351" fill="#243044"/>
+  <line x1="472" y1="346" x2="158" y2="346" stroke="#243044" stroke-width="2"/>
+  <polygon points="150,346 160,341 160,351" fill="#243044"/>
+  <text x="176" y="338" fill="#1c1915" font-family="Segoe UI, sans-serif" font-size="13">6. Binary frames: raw MySQL bytes, both ways</text>
+
+  <text x="32" y="448" fill="#5c564c" font-family="Segoe UI, sans-serif" font-size="13">The token frame and the ok frame are not sent to MySQL. After ok, the bridge does not interpret the bytes.</text>
+</svg>

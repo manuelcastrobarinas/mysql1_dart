@@ -8,17 +8,41 @@ import 'package:mysql2/src/bridge/mysql_bridge.dart';
 /// a WebSocket, and this process opens the database socket. The database host
 /// comes from the environment below, never from the page.
 ///
-///     MYSQL_BRIDGE_TOKEN   required, at least 16 characters
-///     MYSQL_HOST           default 127.0.0.1
-///     MYSQL_PORT           default 3306
-///     MYSQL_BRIDGE_BIND    default 127.0.0.1
-///     MYSQL_BRIDGE_PORT    default 8080
-///     MYSQL_BRIDGE_ORIGIN  if set, only this Origin is upgraded
+/// Two addresses are involved. `MYSQL_BRIDGE_BIND` and `MYSQL_BRIDGE_PORT`
+/// are the WebSocket the page opens (`ConnectionSettings.bridgeUrl`).
+/// `MYSQL_HOST` and `MYSQL_PORT` are the database this process dials. The
+/// page does not send that second address.
 ///
-/// The token, the database user and the password all end up inside the built
-/// web app. Anyone who can load the app can read them. Bind this to loopback
-/// unless the people who can open that WebSocket are the people who should
-/// be able to log in to that database.
+///     MYSQL_BRIDGE_TOKEN   required, at least 16 characters. The page's
+///                          bridgeToken. Never printed. The process exits
+///                          if it is missing or shorter.
+///     MYSQL_HOST           where this process finds MySQL. Default
+///                          127.0.0.1, meaning MySQL is on this computer.
+///     MYSQL_PORT           MySQL's TCP port. Default 3306. Set it when
+///                          MySQL listens somewhere else, such as 3307.
+///     MYSQL_BRIDGE_BIND    interface of the WebSocket. Default 127.0.0.1,
+///                          so only this computer can open it.
+///     MYSQL_BRIDGE_PORT    port of the WebSocket. Default 8080. This is
+///                          the port in bridgeUrl, not MySQL's port.
+///     MYSQL_BRIDGE_ORIGIN  if set, the only Origin header which is upgraded.
+///
+/// A bridge for MySQL on port 3307, reachable only from this computer:
+///
+///     $env:MYSQL_BRIDGE_TOKEN = 'a-long-random-secret'
+///     $env:MYSQL_HOST = '127.0.0.1'
+///     $env:MYSQL_PORT = '3307'
+///     $env:MYSQL_BRIDGE_BIND = '127.0.0.1'
+///     $env:MYSQL_BRIDGE_PORT = '8080'
+///     dart run mysql2:mysql_bridge
+///
+/// That prints `ws://127.0.0.1:8080/mysql` and `forwarding to 127.0.0.1:3307`.
+/// The path is always `/mysql`. The token, the database user and the password
+/// all end up inside the built web app. Anyone who can load the app can read
+/// them. Bind this to loopback unless the people who can open that WebSocket
+/// are the people who should be able to log in to that database.
+///
+/// The README section "Flutter Web" is the full walk-through, including the
+/// diagrams of these two hops and of the token handshake.
 Future<void> main() async {
   final token = Platform.environment['MYSQL_BRIDGE_TOKEN'] ?? '';
   if (token.length < 16) {

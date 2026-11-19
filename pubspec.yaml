@@ -1,5 +1,5 @@
 name: mysql2
-version: 0.24.0
+version: 0.24.1
 description: A MySQL and MariaDB driver for Dart and Flutter, including Flutter web through a WebSocket bridge.
 repository: https://github.com/manuelcastrobarinas/mysql1_dart
 homepage: https://github.com/manuelcastrobarinas/mysql1_dart
