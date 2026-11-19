@@ -4,7 +4,7 @@ import 'dart:async';
 import 'dart:io';
 import 'dart:typed_data';
 
-import 'package:mysql1/src/packet_stream.dart';
+import 'package:mysql2/src/packet_stream.dart';
 import 'package:test/test.dart';
 
 Uint8List _bytes(List<int> bytes) => Uint8List.fromList(bytes);

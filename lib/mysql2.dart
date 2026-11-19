@@ -2,7 +2,7 @@
 // keeping them. The analyzer in Dart 3.0 reports naming them here.
 // ignore_for_file: deprecated_member_use_from_same_package
 
-library mysql1;
+library mysql2;
 
 export 'src/blob.dart';
 export 'src/mysql_client_error.dart' show MySqlClientError;

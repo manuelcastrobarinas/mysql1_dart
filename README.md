@@ -1,10 +1,12 @@
-mysql1
+mysql2
 ======
 
-A MySQL driver for the Dart programming language. Works on Flutter and on the server.
+A MySQL driver for the Dart programming language. Works on Flutter, including
+Flutter web, and on the server.
 
-This library aims to provide an easy to use interface to MySQL. `mysql1` originated 
-as a fork of the SQLJocky driver.
+This is the published line of [`mysql1`](https://github.com/adamlofts/mysql1_dart)
+with a WebSocket bridge, so an app can depend on it while that support is in
+review upstream. The API is the same. Import `package:mysql2/mysql2.dart`.
 
 Principles
 ----------
@@ -112,7 +114,7 @@ MYSQL_BRIDGE_ORIGIN  if set, the only Origin which is upgraded
 ```
 
 ```
-dart run mysql1:mysql_bridge
+dart run mysql2:mysql_bridge
 ```
 
 From Flutter web:

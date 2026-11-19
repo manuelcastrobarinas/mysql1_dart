@@ -1,6 +1,6 @@
 import 'dart:async';
 
-import 'package:mysql1/mysql1.dart';
+import 'package:mysql2/mysql2.dart';
 
 Future main() async {
   // Open a connection (testdb should already exist)

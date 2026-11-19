@@ -5,8 +5,8 @@ import 'dart:async';
 import 'dart:io';
 
 import 'package:logging/logging.dart';
-import 'package:mysql1/mysql1.dart';
-import 'package:mysql1/src/protocol_connection.dart';
+import 'package:mysql2/mysql2.dart';
+import 'package:mysql2/src/protocol_connection.dart';
 import 'package:test/test.dart';
 
 void main() {

@@ -4,7 +4,7 @@
 /// so a page which does not know it never gets as far as MySQL. The frame is
 /// not forwarded. After the bridge replies [bridgeAuthOk], every frame is
 /// raw protocol bytes, one WebSocket binary message per chunk.
-const String bridgeAuthPrefix = 'mysql1-bridge-auth ';
+const String bridgeAuthPrefix = 'mysql2-bridge-auth ';
 
 /// The text frame the bridge sends once the database socket is open.
 const String bridgeAuthOk = 'ok';

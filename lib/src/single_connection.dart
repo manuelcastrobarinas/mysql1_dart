@@ -77,7 +77,7 @@ class ConnectionSettings {
   /// The timeout for connecting to the database and for all database operations.
   Duration timeout;
 
-  /// The WebSocket URL of a mysql1 bridge (`ws://` or `wss://`, path `/mysql`).
+  /// The WebSocket URL of a mysql2 bridge (`ws://` or `wss://`, path `/mysql`).
   ///
   /// The browser cannot open a TCP socket, so a Flutter web app cannot connect
   /// to [host] and [port] itself. Set this to a bridge started from

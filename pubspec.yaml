@@ -1,7 +1,8 @@
-name: mysql1
-version: 0.23.0
-description: A library for connecting to and querying MySQL & MariaDB databases.
-homepage: https://github.com/adamlofts/mysql1_dart
+name: mysql2
+version: 0.24.0
+description: A MySQL and MariaDB driver for Dart and Flutter, including Flutter web through a WebSocket bridge.
+repository: https://github.com/manuelcastrobarinas/mysql1_dart
+homepage: https://github.com/manuelcastrobarinas/mysql1_dart
 
 environment:
   sdk: "^3.0.0"

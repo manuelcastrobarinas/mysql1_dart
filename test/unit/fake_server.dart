@@ -2,8 +2,8 @@ import 'dart:async';
 import 'dart:io';
 import 'dart:typed_data';
 
-import 'package:mysql1/src/packet_stream.dart';
-import 'package:mysql1/src/protocol_connection.dart';
+import 'package:mysql2/src/packet_stream.dart';
+import 'package:mysql2/src/protocol_connection.dart';
 
 /// The server's end of a connection over loopback, for tests which need to
 /// say exactly which packets come back.

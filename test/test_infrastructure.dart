@@ -2,7 +2,7 @@ library mysql1.test.test_infrastructure;
 
 import 'dart:io';
 
-import 'package:mysql1/mysql1.dart';
+import 'package:mysql2/mysql2.dart';
 import 'package:test/test.dart';
 
 MySqlConnection get conn => _conn;

@@ -1,8 +1,13 @@
 Changelog
 =========
 
-Unreleased
+v0.24.0
 --
+
+19 Nov 2026
+
+Published as `mysql2`, the web-capable line of `mysql1` 0.23.0. Import
+`package:mysql2/mysql2.dart`.
 
 The driver can be used from Flutter web. A browser cannot open a TCP socket,
 so the connection is carried over a WebSocket to `bin/mysql_bridge.dart`,

@@ -4,9 +4,9 @@ import 'dart:async';
 import 'dart:typed_data';
 import 'dart:io';
 
-import 'package:mysql1/mysql1.dart'
+import 'package:mysql2/mysql2.dart'
     show MySqlClientError, MySqlConnection, MySqlException;
-import 'package:mysql1/src/mysql_exception.dart';
+import 'package:mysql2/src/mysql_exception.dart';
 import 'package:test/test.dart';
 
 import 'fake_server.dart';

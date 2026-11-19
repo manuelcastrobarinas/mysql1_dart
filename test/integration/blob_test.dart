@@ -2,7 +2,7 @@ library mysql1.test.blob_test;
 
 import 'dart:typed_data';
 
-import 'package:mysql1/mysql1.dart';
+import 'package:mysql2/mysql2.dart';
 import 'package:test/test.dart';
 
 import '../test_infrastructure.dart';

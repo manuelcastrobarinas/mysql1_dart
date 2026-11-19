@@ -1,6 +1,6 @@
 import 'dart:io';
 
-import 'package:mysql1/src/bridge/mysql_bridge.dart';
+import 'package:mysql2/src/bridge/mysql_bridge.dart';
 
 /// Carry MySQL connections for a browser.
 ///
@@ -38,7 +38,7 @@ Future<void> main() async {
     port: _port('MYSQL_BRIDGE_PORT', 8080),
     origin: _optional('MYSQL_BRIDGE_ORIGIN'),
   );
-  stdout.writeln('mysql1 bridge listening on ${bridge.url}');
+  stdout.writeln('mysql2 bridge listening on ${bridge.url}');
   stdout.writeln('forwarding to ${bridge.mysqlHost}:${bridge.mysqlPort}');
 }
 

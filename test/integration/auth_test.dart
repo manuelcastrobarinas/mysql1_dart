@@ -2,7 +2,7 @@ library mysql1.test.auth_test;
 
 import 'dart:io';
 
-import 'package:mysql1/mysql1.dart';
+import 'package:mysql2/mysql2.dart';
 import 'package:test/test.dart';
 
 import '../test_infrastructure.dart';

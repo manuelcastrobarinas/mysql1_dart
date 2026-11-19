@@ -2,10 +2,10 @@ library mysql1.query_response_test;
 
 import 'dart:convert';
 
-import 'package:mysql1/mysql1.dart' show MySqlException;
-import 'package:mysql1/src/constants.dart';
-import 'package:mysql1/src/query/query_response.dart';
-import 'package:mysql1/src/query/standard_data_packet.dart';
+import 'package:mysql2/mysql2.dart' show MySqlException;
+import 'package:mysql2/src/constants.dart';
+import 'package:mysql2/src/query/query_response.dart';
+import 'package:mysql2/src/query/standard_data_packet.dart';
 import 'package:test/test.dart';
 
 import 'fake_server.dart';

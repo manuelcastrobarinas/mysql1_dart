@@ -1,8 +1,8 @@
-import 'package:mysql1/mysql1.dart';
+import 'package:mysql2/mysql2.dart';
 
 /// The same calls as `example.dart`, pointed at the bridge instead of a socket.
 ///
-/// Run `dart run mysql1:mysql_bridge` where it can reach MySQL, with
+/// Run `dart run mysql2:mysql_bridge` where it can reach MySQL, with
 /// `MYSQL_BRIDGE_TOKEN` set to the token below, then run this. `host` and
 /// `port` are not where the database is: the bridge was given that when it
 /// started. The browser cannot open port 3306 itself.

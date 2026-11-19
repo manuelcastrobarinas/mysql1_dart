@@ -2,8 +2,8 @@ library mysql1.substitute_params_test;
 
 import 'dart:typed_data';
 
-import 'package:mysql1/mysql1.dart';
-import 'package:mysql1/src/substitute_params.dart';
+import 'package:mysql2/mysql2.dart';
+import 'package:mysql2/src/substitute_params.dart';
 
 import 'package:test/test.dart';
 

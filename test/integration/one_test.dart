@@ -1,6 +1,6 @@
 library mysql1.test.one_test;
 
-import 'package:mysql1/mysql1.dart';
+import 'package:mysql2/mysql2.dart';
 import 'package:test/test.dart';
 
 import '../test_infrastructure.dart';

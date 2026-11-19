@@ -2,7 +2,7 @@ library mysql1.payload_test;
 
 import 'dart:typed_data';
 
-import 'package:mysql1/src/payload.dart';
+import 'package:mysql2/src/payload.dart';
 import 'package:test/test.dart';
 
 PayloadReader _reader(List<int> bytes) =>

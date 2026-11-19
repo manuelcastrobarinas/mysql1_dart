@@ -2,8 +2,8 @@ library mysql1.rsa_test;
 
 import 'dart:convert';
 
-import 'package:mysql1/mysql1.dart' show MySqlClientError;
-import 'package:mysql1/src/rsa.dart';
+import 'package:mysql2/mysql2.dart' show MySqlClientError;
+import 'package:mysql2/src/rsa.dart';
 import 'package:test/test.dart';
 
 import 'rsa_test_key.dart';

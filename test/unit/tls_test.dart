@@ -4,10 +4,10 @@ import 'dart:convert';
 import 'dart:io';
 import 'dart:typed_data';
 
-import 'package:mysql1/mysql1.dart' show MySqlClientError, MySqlProtocolError;
-import 'package:mysql1/src/constants.dart';
-import 'package:mysql1/src/handshake.dart';
-import 'package:mysql1/src/payload.dart';
+import 'package:mysql2/mysql2.dart' show MySqlClientError, MySqlProtocolError;
+import 'package:mysql2/src/constants.dart';
+import 'package:mysql2/src/handshake.dart';
+import 'package:mysql2/src/payload.dart';
 import 'package:test/test.dart';
 
 import 'fake_server.dart';

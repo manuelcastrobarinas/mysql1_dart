@@ -2,12 +2,12 @@ import 'dart:async';
 import 'dart:io';
 import 'dart:typed_data';
 
-import 'package:mysql1/mysql1.dart';
-import 'package:mysql1/src/bridge/bridge_protocol.dart';
-import 'package:mysql1/src/bridge/mysql_bridge.dart';
-import 'package:mysql1/src/net/bridge_client.dart';
-import 'package:mysql1/src/net/connector.dart';
-import 'package:mysql1/src/net/web_guard.dart';
+import 'package:mysql2/mysql2.dart';
+import 'package:mysql2/src/bridge/bridge_protocol.dart';
+import 'package:mysql2/src/bridge/mysql_bridge.dart';
+import 'package:mysql2/src/net/bridge_client.dart';
+import 'package:mysql2/src/net/connector.dart';
+import 'package:mysql2/src/net/web_guard.dart';
 import 'package:test/test.dart';
 
 const _token = '0123456789abcdef';
